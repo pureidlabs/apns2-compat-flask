@@ -135,4 +135,4 @@ class APNsClient(object):
 
         url = '/3/device/{}'.format(token_hex)
         res = self._connection.post(json=notification.dict(), url=url, headers=headers)
-        return res
+        return res.status_code
